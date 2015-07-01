@@ -36,7 +36,7 @@ class Offer
   def self.parse_to_json(response)
     json_response = JSON.parse(response.body)
   end
-  
+
   private
     # Returns the Hash representation of the params
     # @param [String] base_string: string that will be the base to calculate the
