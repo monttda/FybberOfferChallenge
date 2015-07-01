@@ -15,32 +15,31 @@ class OffersController < ApplicationController
     page = params[:page]
     http_response = Offer.fetch_offers(page,pub0,uid)
     @json_response = Offer.parse_to_json(http_response)
-    verify_response(http_response.code)
+    verify_response(http_response.code,@json_response['code'])
   end
 
   private
 
     # Depending on the Fyber API responde code assign an error to the flash
     # if there is one
-    def verify_response(code)
-      case code
-      when "200"
-        if @json_response['count'].present?
-          @empty = @json_response['count'] > 0 ? false : true
-        else
-          flash.now[:success] = t('request.empty')
-          @empty = true
-        end
-      when "400"
+    def verify_response(code,other)
+      case other
+      when "OK"
+        @empty = false
+      when "NO_CONTENT"
+        flash.now[:success] = t('request.empty')
+        @empty = true
+      when "ERROR_INVALID_PAGE"
+        flash.now[:error] = t('request.wrong_page')
+        @empty = true
+      when "ERROR_INVALID_UID"
         flash.now[:error] = t('request.params_error')
         @empty = true
-      when "401","404"
-        flash.now[:error] = t('request.app_error')
-        @empty = true
-      when "500", "502"
+      when "ERROR_INTERNAL_SERVER_ERROR"
         flash.now[:error] = t('request.fyber_error')
         @empty = true
       else
+        flash.now[:error] = t('request.app_error')
         @empty = true
       end
     end

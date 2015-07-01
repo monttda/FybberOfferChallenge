@@ -4,7 +4,8 @@ require 'rails_helper'
 describe "Fetching offers", :type => :feature , js: true do
   context 'When given erroneous params' do
     it "should render an error message" do
-      expected_text = "There has been an error please verify that You have submitted valid parameters to the search and retry"
+      expected_text = "There has been an error please verify that You "\
+                      "have submitted a valid User ID to the search and retry."
       visit root_path
       click_on('Search')
       within("#offers") do

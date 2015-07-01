@@ -31,9 +31,10 @@ en:
       uid: 'User id'
       pub0: 'Search by'
   request:
+    wrong_page: "The page You have requested is not available."
     empty: "There are no availables offers for Your search at the moment."
-    params_error: "There has been an error please verify that You have submitted valid parameters to the search and retry"
-    app_error: "There has been an error with our application please contact the webmaster"
-    fyber_error: "There has been an error with the Fyber server please try again later"
+    params_error: "There has been an error please verify that You have submitted a valid User ID to the search and retry."
+    app_error: "There has been an error with our application please contact the webmaster."
+    fyber_error: "There has been an error with the Fyber server please try again later."
   offer:
     payout: "Payout :"
