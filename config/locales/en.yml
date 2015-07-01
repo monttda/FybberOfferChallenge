@@ -30,3 +30,7 @@ en:
     placeholder:
       uid: 'User id'
       pub0: 'Search by'
+  request:
+    400: "There has been an error please verify that You have submitted valid parameters to the search and retry"
+    401: "There has been an error with our application please contact the webmaster"
+    500: "There has been an error with the Fyber server please try again later"

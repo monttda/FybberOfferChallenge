@@ -1,4 +1,4 @@
-= form_tag '#', class: 'form form-horizontal',  remote: true, method: :get, id: 'offersSearchForm'  do
+= form_tag fetch_offers_offers_path, class: 'form form-horizontal',  remote: true, method: :get, id: 'offersSearchForm'  do
   .form-group
     = label_tag 'uid', t('form.title.uid') , class: 'col-xs-2 control-label'
     .col-xs-7
@@ -13,4 +13,4 @@
       =number_field_tag 'page' , nil,  min: 0, class: 'form-control'
   .form-group
     .col-xs-offset-2.col-xs-10
-      =submit_tag t('form.title.submit'), class: 'btn btn-primary'
+      =submit_tag t('form.title.submit'), class: 'btn btn-primary offersSubmit'
