@@ -10,3 +10,4 @@
 <% else %>
     offers.append("<%= j(render 'message' , message: flash.now[:error] , type: 'alert-danger')%>")
 <% end %>
+    $('.offersSubmit').removeClass('disabled')

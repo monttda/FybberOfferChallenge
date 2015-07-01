@@ -25,10 +25,10 @@ class OffersController < ApplicationController
     def verify_response(code)
       case code
       when "200"
-        flash.now[:success] = t('request.empty')
         if @json_response['count'].present?
           @empty = @json_response['count'] > 0 ? false : true
         else
+          flash.now[:success] = t('request.empty')
           @empty = true
         end
       when "400"

@@ -18,5 +18,8 @@
 - content_for(:page_javascript) do
   :coffeescript
     $(document).ready ->
-      $('#offersSearchForm').on 'submit', (e) ->
+      $('.offersSubmit').on 'click', (e) ->
+        e.preventDefault()
         $('#offers').html("#{j(render 'offers/loader')}")
+        $('#offersSearchForm').submit()
+        $('.offersSubmit').addClass('disabled')
