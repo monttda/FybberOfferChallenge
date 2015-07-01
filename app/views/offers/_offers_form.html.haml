@@ -1,16 +1,16 @@
 = form_tag '#', class: 'form form-horizontal',  remote: true, method: :get, id: 'offersSearchForm'  do
   .form-group
-    = label_tag 'uid', 'User ID' , class: 'col-xs-2 control-label'
+    = label_tag 'uid', t('form.title.uid') , class: 'col-xs-2 control-label'
     .col-xs-7
-      =text_field_tag 'uid' , nil,  class: 'form-control', placeholder: 'User id'
+      =text_field_tag 'uid' , nil,  class: 'form-control', placeholder: t('form.placeholder.uid')
   .form-group#custom-params
-    = label_tag 'pub0', 'Search by' , class: 'col-xs-2 control-label'
+    = label_tag 'pub0', t('form.title.pub0') , class: 'col-xs-2 control-label'
     .col-xs-7
-      =text_field_tag 'pub0' , nil,  class: 'form-control', placeholder: 'Search by'
+      =text_field_tag 'pub0' , nil,  class: 'form-control', placeholder: t('form.placeholder.pub0')
   .form-group
-    = label_tag 'page', 'Page number' , class: 'col-xs-2 control-label'
+    = label_tag 'page', t('form.title.page') , class: 'col-xs-2 control-label'
     .col-xs-2
       =number_field_tag 'page' , nil,  min: 0, class: 'form-control'
   .form-group
     .col-xs-offset-2.col-xs-10
-      =submit_tag 'Search', class: 'btn btn-primary'
+      =submit_tag t('form.title.submit'), class: 'btn btn-primary'

@@ -20,4 +20,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  title: 'Fyber Offers'
+  form:
+    title:
+      uid: 'User ID'
+      pub0: 'Search by'
+      page: 'Page number'
+      submit: 'Search'
+    placeholder:
+      uid: 'User id'
+      pub0: 'Search by'
