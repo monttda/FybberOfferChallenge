@@ -14,3 +14,9 @@
   .form-group
     .col-xs-offset-2.col-xs-10
       =submit_tag t('form.title.submit'), class: 'btn btn-primary offersSubmit'
+
+- content_for(:page_javascript) do
+  :coffeescript
+    $(document).ready ->
+      $('#offersSearchForm').on 'submit', (e) ->
+        $('#offers').html("#{j(render 'offers/loader')}")
