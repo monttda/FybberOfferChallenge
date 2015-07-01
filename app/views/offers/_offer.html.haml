@@ -1,0 +1,6 @@
+.col-xs-3
+  .thumbnail
+    %img{ src: "#{offer['thumbnail']['lowres']}",  style: "height: 50px; width: 50px; display: block;"}
+      .caption
+        %h5= offer['title']
+        %p= "#{t('offer.payout')} #{offer['payout']}"

@@ -10,7 +10,7 @@
   .form-group
     = label_tag 'page', t('form.title.page') , class: 'col-xs-2 control-label'
     .col-xs-2
-      =number_field_tag 'page' , nil,  min: 0, class: 'form-control'
+      =number_field_tag 'page' , 1,  min: 1, class: 'form-control'
   .form-group
     .col-xs-offset-2.col-xs-10
       =submit_tag t('form.title.submit'), class: 'btn btn-primary offersSubmit'

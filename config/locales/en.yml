@@ -24,13 +24,16 @@ en:
   form:
     title:
       uid: 'User ID'
-      pub0: 'Search by'
+      pub0: 'Custom field'
       page: 'Page number'
       submit: 'Search'
     placeholder:
       uid: 'User id'
       pub0: 'Search by'
   request:
-    400: "There has been an error please verify that You have submitted valid parameters to the search and retry"
-    401: "There has been an error with our application please contact the webmaster"
-    500: "There has been an error with the Fyber server please try again later"
+    empty: "There are no availables offers for Your search at the moment."
+    params_error: "There has been an error please verify that You have submitted valid parameters to the search and retry"
+    app_error: "There has been an error with our application please contact the webmaster"
+    fyber_error: "There has been an error with the Fyber server please try again later"
+  offer:
+    payout: "Payout :"

@@ -1,7 +1,7 @@
 require 'rails_helper'
 describe Offer do
   describe ".fetch_offers" do
-    context " when given a proper uid " ,focus: true do
+    context " when given a proper uid " do
       it "should return successful request from the Fyber API " do
         response = Offer.fetch_offers('1','','player1')
         expect(response.code).to eq("200")
